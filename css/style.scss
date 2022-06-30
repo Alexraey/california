@@ -23,9 +23,28 @@ a{
 
 header{
   padding-bottom: 60px;
-
+  nav{
+    a {
+      &.navbar-brand {
+        margin-right: 62px;
+      }
+    }
+  }
+  form{
+    button::before{
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      content: "\f002";
+      font-size: 25px;
+    }
+  }
 }
-
+.my_shop::before{
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f07a";
+  font-size: 25px;
+}
 
 /*carousel*/
 
@@ -59,6 +78,9 @@ header{
   position: relative;
   top: -75px;
   left: 290px;
+  @include max-screen(1300px){
+    display: none;
+  }
 }
 
 
@@ -101,9 +123,10 @@ header{
       max-width: 618px;
       padding-right: 0;
       span{
-        text-align: right;
-        &.position-relative{
-          right: 42px;
+        & .position-relative{
+          p{
+
+          }
         }
         }
       }
@@ -164,15 +187,21 @@ header{
 .ideas_have {
   text-align: center;
   padding-bottom: 75px;
+  a::after{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f245";
+    margin-left: 10px;
+  }
 
   .col-lg-6 {
     text-align: left;
+    line-height: 4;
     @include max-screen(991px) {
       text-align: center;
     }
   }
 }
-
 
 
 .see_best{
@@ -199,13 +228,50 @@ header{
       text-align: center;
     }
     .big_card{
+      padding: 45px 0;
       background: #DCE5E2;
       border-radius: 16px;
       text-align: center;
+      .form-inline{
+        .position-relative{
+          max-width: 273px;
+          margin: auto;
+          input{
+            width: inherit;
+            margin: auto;
+            padding: 0 50px;
+          }
+          button{
+            right: 0;
+            border-radius: 0 200px 200px 0;
+          }
+        }
+
+      }
     }
     .small_container{
-      max-width: 650px;
+      max-width: 555px;
       margin: auto;
+      text-align: center;
+      a{
+        margin: 0 5px 7px;
+      }
+      .form-control{
+        width: 100%;
+        padding: 0 60px;
+      }
+      button {
+        top: -4px;
+        @include max-screen(600px){
+          top: -12px;
+        }
+        &::before {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          content: "\f002";
+          font-size: 25px;
+        }
+      }
     }
   }
 }
@@ -220,14 +286,17 @@ footer{
     }
   }
   .col-lg-2{
-    flex-direction: column;
-    display: flex;
     h5{
       margin-bottom: 19px;
     }
-    a{
-      margin-bottom: 14px;
+    ul{
+      padding: 0;
+      li{
+        margin-bottom: 14px;
+        list-style: none;
+      }
     }
+
   }
   hr{
     background: #DCE5E2;

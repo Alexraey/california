@@ -8,6 +8,22 @@ a {
 header {
   padding-bottom: 60px;
 }
+header nav a.navbar-brand {
+  margin-right: 62px;
+}
+header form button::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f002";
+  font-size: 25px;
+}
+
+.my_shop::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f07a";
+  font-size: 25px;
+}
 
 /*carousel*/
 .owl-carousel .owl-nav button.owl-prev:after {
@@ -40,6 +56,11 @@ header {
   position: relative;
   top: -75px;
   left: 290px;
+}
+@media screen and (max-width: 1300px) {
+  .owl-carousel button.owl-dot {
+    display: none;
+  }
 }
 
 .container {
@@ -79,12 +100,6 @@ header {
 .shop_our .row .col-12 {
   max-width: 618px;
   padding-right: 0;
-}
-.shop_our .row .col-12 span {
-  text-align: right;
-}
-.shop_our .row .col-12 span.position-relative {
-  right: 42px;
 }
 .shop_our .row .col-md-6 {
   max-width: 312px;
@@ -138,8 +153,15 @@ header {
   text-align: center;
   padding-bottom: 75px;
 }
+.ideas_have a::after {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f245";
+  margin-left: 10px;
+}
 .ideas_have .col-lg-6 {
   text-align: left;
+  line-height: 4;
 }
 @media screen and (max-width: 991px) {
   .ideas_have .col-lg-6 {
@@ -171,13 +193,49 @@ header {
   text-align: center;
 }
 .looking_for .container .big_card {
+  padding: 45px 0;
   background: #DCE5E2;
   border-radius: 16px;
   text-align: center;
 }
-.looking_for .container .small_container {
-  max-width: 650px;
+.looking_for .container .big_card .form-inline .position-relative {
+  max-width: 273px;
   margin: auto;
+}
+.looking_for .container .big_card .form-inline .position-relative input {
+  width: inherit;
+  margin: auto;
+  padding: 0 50px;
+}
+.looking_for .container .big_card .form-inline .position-relative button {
+  right: 0;
+  border-radius: 0 200px 200px 0;
+}
+.looking_for .container .small_container {
+  max-width: 555px;
+  margin: auto;
+  text-align: center;
+}
+.looking_for .container .small_container a {
+  margin: 0 5px 7px;
+}
+.looking_for .container .small_container .form-control {
+  width: 100%;
+  padding: 0 60px;
+}
+.looking_for .container .small_container button {
+  top: -4px;
+}
+@media screen and (max-width: 600px) {
+  .looking_for .container .small_container button {
+    top: -12px;
+  }
+}
+.looking_for .container .small_container button::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f002";
+  font-size: 25px;
 }
 
 footer {
@@ -190,15 +248,15 @@ footer {
     text-align: center;
   }
 }
-footer .col-lg-2 {
-  flex-direction: column;
-  display: flex;
-}
 footer .col-lg-2 h5 {
   margin-bottom: 19px;
 }
-footer .col-lg-2 a {
+footer .col-lg-2 ul {
+  padding: 0;
+}
+footer .col-lg-2 ul li {
   margin-bottom: 14px;
+  list-style: none;
 }
 footer hr {
   background: #DCE5E2;
